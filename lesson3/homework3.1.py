@@ -10,8 +10,9 @@ elif operation == "-":
 elif operation == "*":
     result = num1 * num2
     print(result)
-elif num2 == 0:
-    print("Помилка: Ділення на нуль неможно!")
 elif operation == "/":
-    result = num1 / num2
-    print(result)
+    if num2 == 0:
+        print("Помилка: Ділення на нуль неможно!")
+    else:
+        result = num1 / num2
+        print(result)
