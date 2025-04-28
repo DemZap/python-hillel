@@ -42,4 +42,5 @@ all_price = total_price_apple + total_price_banana
 put_success(
     f"Cумма до сплати: {all_price} грн \nВартість яблук {total_price_apple} грн \nВартість бананів {total_price_banana} грн"
 )
+
 pass
