@@ -16,3 +16,4 @@ elif operation == "/":
     else:
         result = number1 / number2
         print("Результат:", result)
+pass
