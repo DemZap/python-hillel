@@ -1,9 +1,26 @@
-# some_list = [0, 1, 7, 2, 4, 8]
-some_list = [1, 3, 5]
-# some_list = [6]
-# some_list = []
+while True:
+    number1 = int(input("Введіть число: "))
+    operation = input("Зробіть операцію (+, -, *, /): ")
+    number2 = int(input("Введіть друге число: "))
+    if operation == "+":
+        result = number1 + number2
+    elif operation == "-":
+        result = number1 - number2
+    elif operation == "*":
+        result = number1 * number2
+    elif operation == "/":
+        if number2 == 0:
+            print("Помилка: Ділення на нуль неможливо!")
+            continue
+        else:
+            result = number1 / number2
+    else:
+        print("Помилка: Невідома операція!")
+        continue
+    print("Результат:", result)
+    continue_calc = input("Продовжити обчислення? (y/n): ").lower()
+    if continue_calc != "y":
+        print("Результат:")
+        break
 
-if some_list:
-    some_list = sum(some_list[::2]) * some_list[-1]
-print(some_list)
 pass
