@@ -1,9 +1,9 @@
-import random
+import string
 
-some_list = random.sample(range(1, 100), random.randint(3, 10))
-new_list = [some_list[0], some_list[2], some_list[-2]]
+text = input("Введіть рядок: ").strip()
+clean_text = "".join(ch for ch in text if ch not in string.punctuation).split()
+hashtag = "#" + "".join(word.capitalize() for word in clean_text)
+hashtag = hashtag[:140]
 
-print("Початковий список:", some_list)
-print("Новий список:", new_list)
-
+print(hashtag)
 pass
