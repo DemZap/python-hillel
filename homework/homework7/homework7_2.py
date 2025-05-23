@@ -4,6 +4,7 @@ def correct_sentence(text):
         text += "."
     return text
 
+
 assert correct_sentence("greetings, friends") == "Greetings, friends.", "Test1"
 assert correct_sentence("hello") == "Hello.", "Test2"
 assert correct_sentence("Greetings. Friends") == "Greetings. Friends.", "Test3"
