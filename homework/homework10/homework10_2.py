@@ -1,21 +1,23 @@
-seconds = int(input("Введіть кількість секунд: "))
+import re
 
-days, number_seconds = divmod(seconds, 86400)
 
-hours, number_seconds = divmod(number_seconds, 3600)
+def first_word(text):
+    """Пошук першого слова у рядку"""
+    return re.search(r"[a-zA-Z']+", text).group()
 
-minutes, number_seconds = divmod(number_seconds, 60)
 
-seconds = number_seconds
+# Тестування
+assert first_word("Hello world") == "Hello", "Test1"
+assert first_word("greetings, friends") == "greetings", "Test2"
+assert first_word("don't touch it") == "don't", "Test3"
+assert first_word(".., and so on ...") == "and", "Test4"
+assert first_word("hi") == "hi", "Test5"
+assert first_word("Hello.World") == "Hello", "Test6"
 
-if 10 <= days % 100 or days % 10 == 0:
-    day = "днів"
-elif days % 10 == 1:
-    day = "днів"
-else:
-    day = "днів"
-
-formatted_time = f"{days} {day}, {str(hours).zfill(2)}:{str(minutes).zfill(2)}:{str(seconds).zfill(2)}"
-
-print(formatted_time)
+print("ОК")  # Всі тести повинні пройти
 pass
+
+# ✔ Використовує re.search() для знаходження першого слова у тексті
+# ✔ r"[a-zA-Z']+" — регулярний вираз, який шукає слово (включаючи апострофи ')
+# ✔ .group() повертає знайдене слово
+# ✔ Проходить всі тестові випадки
