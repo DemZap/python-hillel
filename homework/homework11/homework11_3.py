@@ -1,5 +1,5 @@
 def is_even(number):
-    return str(number)[-1] in "02468"
+    return number % 2 == 0
 
 
 assert is_even(2494563894038**2) == True, "Test1"
