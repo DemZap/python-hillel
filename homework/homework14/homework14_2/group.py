@@ -1,8 +1,4 @@
-from student import Student
-
-class GroupLimitError(Exception):
-    def __init__(self, message="У групі не може бути більше 10 студентів"):
-        super().__init__(message)
+from error import GroupLimitError
 
 class Group:
     def __init__(self, number):
